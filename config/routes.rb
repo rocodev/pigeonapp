@@ -1,5 +1,7 @@
 Koupon::Application.routes.draw do
-  match '/auth/:provider/callback', :to => 'sessions#callback'
+
+
+  devise_for :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

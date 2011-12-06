@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DeliverioFb</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= render_page_title %>
+ 
   <%= csrf_meta_tag %>
+  <%= javascript_include_tag "application" %>
+
 </head>
-<body>
+<%= render_body_tag %>
+  <div class="topbar" data-dropdown="dropdown">
+    <div class="topbar-inner">
+      <div class="container">
+        <h3>
+          <a href="/"><%= Setting.app_name %></a>
+        </h3>
+         <%= render_list :class => "nav" do |li|
+           #li << link_to(t("menu.topics"), topics_path)
+           #li << link_to(t("menu.wiki"), gikis_path )
+           #li << link_to(t("menu.sites"), sites_path )
+           #li << link_to(t("menu.users"), users_path)
+         end %>
+        <%# render "common/search_form" %>
+        <%= render "common/user_nav" %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <%= render_breadcrumb %>
+    <%= render "common/feeds" %>
 
-<%= yield %>
-
+    <div id="main" class="container-fluid">
+      <%= notice_message %>
+      <%= yield %>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <%= raw SiteConfig.footer_html %>
+    </div>
+  </footer>
+  
+  <%# render :partial => "common/facebook_js" %>
+  <%# render :partial => "common/google_analytics"%>
+ 
 </body>
 </html>

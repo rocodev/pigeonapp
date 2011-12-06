@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/plataformatec/simple_form.git
+  revision: 031e3324ca66c616f8aa0348164e26abb917b1b2
+  specs:
+    simple_form (2.0.0.dev)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+
+GIT
   remote: https://github.com/sferik/rails_admin.git
   revision: 87aff45576e914d63997735731d3a21f7ecf4390
   specs:
@@ -13,6 +21,14 @@ GIT
       rack-pjax
       rails (~> 3.1)
       remotipart (~> 1.0)
+
+GIT
+  remote: https://github.com/xdite/bootstrap-rails.git
+  revision: 7fe2d48ef0b01de7b16aa927465d83c768e3769e
+  specs:
+    bootstrap-rails (0.1.4)
+      railties (~> 3.0)
+      thor (~> 0.14)
 
 GEM
   remote: http://rubygems.org/
@@ -46,13 +62,14 @@ GEM
       activesupport (= 3.1.0)
     activesupport (3.1.0)
       multi_json (~> 1.0)
-    addressable (2.2.4)
+    addressable (2.2.6)
     arel (2.2.1)
     bbenezech-nested_form (0.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (1.4.1)
       sass-rails (~> 3.1.0)
     builder (3.0.0)
+    cancan (1.6.7)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -60,15 +77,20 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.1.3)
+    devise (1.5.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.1)
     erubis (2.7.0)
     execjs (1.2.11)
       multi_json (~> 1.0)
-    faraday (0.6.1)
-      addressable (~> 2.2.4)
-      multipart-post (~> 1.1.0)
-      rack (< 2, >= 1.1.0)
+    faraday (0.7.5)
+      addressable (~> 2.2.6)
+      multipart-post (~> 1.1.3)
+      rack (>= 1.1.0, < 2)
     fastercsv (1.5.4)
     haml (3.1.4)
+    hashie (1.2.0)
     hike (1.2.1)
     hpricot (0.8.5)
     i18n (0.6.0)
@@ -84,58 +106,27 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
-    multi_xml (0.2.2)
     multipart-post (1.1.4)
     mysql2 (0.3.7)
-    net-ldap (0.2.2)
-    nokogiri (1.4.7)
-    oa-basic (0.2.6)
-      oa-core (= 0.2.6)
-      rest-client (~> 1.6.0)
-    oa-core (0.2.6)
-    oa-enterprise (0.2.6)
-      addressable (= 2.2.4)
-      net-ldap (~> 0.2.2)
-      nokogiri (~> 1.4.2)
-      oa-core (= 0.2.6)
-      pyu-ruby-sasl (~> 0.0.3.1)
-      rubyntlm (~> 0.1.1)
-    oa-more (0.2.6)
-      multi_json (~> 1.0.0)
-      oa-core (= 0.2.6)
-      rest-client (~> 1.6.0)
-    oa-oauth (0.2.6)
-      faraday (~> 0.6.1)
-      multi_json (~> 1.0.0)
-      multi_xml (~> 0.2.2)
-      oa-core (= 0.2.6)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.4.1)
-    oa-openid (0.2.6)
-      oa-core (= 0.2.6)
-      rack-openid (~> 1.3.1)
-      ruby-openid-apps-discovery (~> 1.2.0)
-    oauth (0.4.5)
-    oauth2 (0.4.1)
-      faraday (~> 0.6.1)
-      multi_json (>= 0.0.5)
-    omniauth (0.2.6)
-      oa-basic (= 0.2.6)
-      oa-core (= 0.2.6)
-      oa-enterprise (= 0.2.6)
-      oa-more (= 0.2.6)
-      oa-oauth (= 0.2.6)
-      oa-openid (= 0.2.6)
+    oauth2 (0.5.1)
+      faraday (~> 0.7.4)
+      multi_json (~> 1.0.3)
+    omniauth (1.0.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-facebook (1.0.0)
+      omniauth-oauth2 (~> 1.0.0)
+    omniauth-oauth2 (1.0.0)
+      oauth2 (~> 0.5.0)
+      omniauth (~> 1.0)
+    open_graph_helper (0.0.3)
+    orm_adapter (0.0.5)
     polyglot (0.3.3)
-    pyu-ruby-sasl (0.0.3.3)
     rack (1.3.5)
     rack-cache (1.0.3)
       rack (>= 0.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
-    rack-openid (1.3.1)
-      rack (>= 1.1.0)
-      ruby-openid (>= 2.1.8)
     rack-pjax (0.5.5)
       hpricot (~> 0.8.4)
       rack (~> 1.3)
@@ -162,12 +153,6 @@ GEM
     rdoc (3.11)
       json (~> 1.4)
     remotipart (1.0.1)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    ruby-openid (2.1.8)
-    ruby-openid-apps-discovery (1.2.0)
-      ruby-openid (>= 2.1.7)
-    rubyntlm (0.1.1)
     sass (3.1.11)
     sass-rails (3.1.5)
       actionpack (~> 3.1.0)
@@ -188,19 +173,30 @@ GEM
     uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    warden (1.1.0)
+      rack (>= 1.0)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-rails!
+  cancan
   coffee-rails (~> 3.1.0)
+  devise
   fastercsv
   jquery-rails
   json
   mysql2
-  omniauth (~> 0.2.0)
+  oauth2
+  omniauth
+  omniauth-facebook
+  open_graph_helper
   rails (= 3.1.0)
   rails_admin!
   sass-rails (~> 3.1.0)
   settingslogic
+  simple_form!
   uglifier
+  will_paginate (= 3.0.pre2)
