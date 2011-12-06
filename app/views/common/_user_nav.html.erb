@@ -1,23 +1,21 @@
 <% if current_user %>
 <ul class="nav secondary-nav" id="userbar">
-  <%
-    notification_class = ["notifications"]
-    notification_class << "unread" if current_user.notifications.unread.count > 0
-    notification_class << "active" if ["notifications"].index(params[:controller])
+  <%# 
+    # notification_class = ["notifications"]
+    # notification_class << "unread" if current_user.notifications.unread.count > 0
+    # notification_class << "active" if ["notifications"].index(params[:controller])
   %>
-  <%= content_tag 'li', :class => notification_class do %>
-    <%= content_tag 'a', :href => notifications_path do %>
-      <span class="count"><%= current_user.notifications.unread.count %></span>
-    <% end %>
-  <% end %>
+  <%#= content_tag 'li', :class => notification_class do %>
+    <%# content_tag 'a', :href => notifications_path do %>
+      <span class="count"><%# current_user.notifications.unread.count %></span>
+    <%# end %>
+  <%# end %>
   <li>
     <%= link_to(current_user.login,user_path(current_user.login), :class => "dropdown-toggle")%>
     <%= render_list :class => "dropdown-menu" do |li|
       li << link_to(t("menu.my_home_page"), user_path(current_user.login) )
       unless params[:controller].match(/cpanel/)
         li << link_to(t("menu.edit_account_path"),edit_user_registration_path)
-        li << link_to(t("menu.notes"), notes_path )
-        li << link_to(t("menu.cpanel"), "/cpanel") if admin?
       end
       li << link_to(t("common.logout"), destroy_user_session_path )
     end %>
