@@ -4,6 +4,7 @@
   <%= render_page_title %>
  
   <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "application"%>
   <%= javascript_include_tag "application" %>
 
 </head>
@@ -27,16 +28,16 @@
   </div>
   <div class="container">
     <%= render_breadcrumb %>
-    <%= render "common/feeds" %>
+    <%# render "common/feeds" %>
 
     <div id="main" class="container-fluid">
-      <%= notice_message %>
+      <%# notice_message %>
       <%= yield %>
     </div>
   </div>
   <footer class="footer">
     <div class="container">
-      <%= raw SiteConfig.footer_html %>
+      <%# raw SiteConfig.footer_html %>
     </div>
   </footer>
   
