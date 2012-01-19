@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  
+
   extend OmniauthCallbacks
   
   has_many :authorizations

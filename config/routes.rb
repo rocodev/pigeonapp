@@ -9,6 +9,12 @@ PigeonApp::Application.routes.draw do
   end
   
   resources :users
+  
+  constraints Company do
+    match '/' => 'companies#show'
+  end
+  
+  root :to => "pages#welcome"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
