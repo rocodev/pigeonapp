@@ -15,14 +15,14 @@ gem "omniauth"
 gem "oauth2"
 gem "omniauth-facebook"
 
-gem 'will_paginate', '3.0.pre2'
-
+gem 'will_paginate', '3.0.pre4'
 gem "cancan"
 
 gem 'open_graph_helper'
 
 gem 'simple_form', :git => "https://github.com/plataformatec/simple_form.git"
-gem 'bootstrap-rails', :require => 'bootstrap-rails', :git => 'https://github.com/xdite/bootstrap-rails.git'
+gem 'anjlab-bootstrap-rails', :git => "git://github.com/anjlab/bootstrap-rails.git", :require => "bootstrap-rails"
+gem 'bootstrap_helper'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -45,5 +45,4 @@ end
 
 gem "jquery-rails"
 gem "fastercsv"
-gem "rails_admin", :git => "https://github.com/sferik/rails_admin.git"
 gem "settingslogic"
