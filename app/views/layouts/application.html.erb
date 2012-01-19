@@ -2,7 +2,6 @@
 <html>
 <head>
   <%= render_page_title %>
- 
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag "application"%>
   <%= javascript_include_tag "application" %>
@@ -13,13 +12,9 @@
     <div class="topbar-inner">
       <div class="container">
         <h3>
-          <a href="/"><%= Setting.app_name %></a>
+          <a href="/"><%= render_site_title %></a>
         </h3>
          <%= render_list :class => "nav" do |li|
-           #li << link_to(t("menu.topics"), topics_path)
-           #li << link_to(t("menu.wiki"), gikis_path )
-           #li << link_to(t("menu.sites"), sites_path )
-           #li << link_to(t("menu.users"), users_path)
          end %>
         <%# render "common/search_form" %>
         <%= render "common/user_nav" %>
