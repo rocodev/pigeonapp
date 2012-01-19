@@ -5,7 +5,6 @@
  *= require bootstrap
  *= require sidebar
  *= require_self
- *= require_tree . 
 */
 
 .container-fluid { padding:0;}
@@ -26,6 +25,7 @@ html {
   height: 100%;
   background:#eee image-url('bg.png') bottom left repeat;
 }
+
 body { background:none;}
 
 code { background:none; }
