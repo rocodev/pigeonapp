@@ -1,13 +1,13 @@
 # coding: utf-8
 require "./config/boot"
 require "bundler/capistrano"
-require 'airbrake/capistrano'
+#require 'airbrake/capistrano'
 require 'cape'
 
 default_environment["RAILS_ENV"] = "production"
 default_environment["PATH"] = "/usr/local/bin:/usr/bin:/bin"
 
-set :application, "pinterest"
+set :application, "pigeonhub"
 set :repository,  "git@github.com:rocodev/pigeonapp.git"
 
 set :branch, "master"
@@ -18,9 +18,9 @@ set :runner, "apps"
 set :deploy_via, :remote_cache
 set :git_shallow_clone, 1
 
-role :web, "pigeonapp.com"                          # Your HTTP server, Apache/etc
-role :app, "pigeonapp.com"                          # This may be the same as your `Web` server
-role :db,  "pigeonapp.com", :primary => true # This is where Rails migrations will run
+role :web, "pigeonhub.com"                          # Your HTTP server, Apache/etc
+role :app, "pigeonhub.com"                          # This may be the same as your `Web` server
+role :db,  "pigeonhub.com", :primary => true # This is where Rails migrations will run
 
 namespace :deploy do
 
