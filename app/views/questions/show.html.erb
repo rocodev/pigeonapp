@@ -15,9 +15,17 @@
   </div>
   <div class="span9">
       <h3>發表回應</h3>
+      <% if !current_user %>
+        （<%= link_to "登入", Setting.domain + user_omniauth_authorize_path(:facebook) %> 會員可免填名稱、Email資料）
+        <br><br>
+      <% end %>
       <%= simple_form_for :comment, :url => question_comments_path(@question) , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
-          <%= f.input :name %>
-          <%= f.input :email %>
+          <% if !current_user %>
+              <%= f.input :name %>
+              <%= f.input :email %>
+          <% end %>
+          
+
           <%= f.input :content, :as => :text, :input_html => { :class => "xxlarge"} %>
           <div class="actions">
               <%= f.submit "Submit", :disable_with => 'Submiting...' %>

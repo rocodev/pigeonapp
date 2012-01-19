@@ -6,6 +6,10 @@ class DiscussionsController < ApplicationController
     @question = Question.new
   end
   
+  def index
+    @discussions = @company.questions
+  end
+  
   protected
   
   def find_company

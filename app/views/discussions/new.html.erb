@@ -9,7 +9,9 @@
         <%= f.input :name %>
         <%= f.input :email %>
     <% end %>
+    
     <%= f.input :subject, :input_html => { :class => "xxlarge"} %>
+    <%= f.input :category_id, :collection => @company.categories, :include_blank => false  %>
     <%= f.input :content, :as => :text, :input_html => { :class => "xxlarge"} %>
     
     <div class="actions">
