@@ -1,7 +1,7 @@
 # coding: utf-8
 require "./config/boot"
 require "bundler/capistrano"
-#require 'airbrake/capistrano'
+require 'airbrake/capistrano'
 require 'cape'
 
 default_environment["RAILS_ENV"] = "production"

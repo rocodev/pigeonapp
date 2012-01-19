@@ -48,7 +48,7 @@ PigeonApp::Application.configure do
   # 
   config.assets.js_compressor  = :uglifier
   config.assets.css_compressor = :scss
-  config.assets.precompile = ["application.scss", "application.js", "bg.png"]
+  config.assets.precompile = ["application.css", "application.js", "bg.png"]
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
