@@ -1,4 +1,4 @@
-Koupon::Application.routes.draw do
+PiegonApp::Application.routes.draw do
 
 
   devise_for :users, :controllers => {
