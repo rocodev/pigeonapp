@@ -1,4 +1,4 @@
-PiegonApp::Application.routes.draw do
+PigeonApp::Application.routes.draw do
 
 
   devise_for :users, :controllers => {

@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PiegonApp::Application.config.secret_token = '9fad404d38f1392a90e570d846aa3baebab8e67bdab9be91f9f5e690b6501cf74cdd0038424eed28c6dba5edde7e1762f264a40612ffd047a338f56c6005a110'
+PigeonApp::Application.config.secret_token = '9fad404d38f1392a90e570d846aa3baebab8e67bdab9be91f9f5e690b6501cf74cdd0038424eed28c6dba5edde7e1762f264a40612ffd047a338f56c6005a110'
