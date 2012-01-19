@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to question_path(@question)
     else
-      render :action => "new"
+      render :template => "discussions/new"
     end
   end
   

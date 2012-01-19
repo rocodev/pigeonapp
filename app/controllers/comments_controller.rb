@@ -10,7 +10,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to question_path(@question)
     else
-      render :action => "new"
+      render :template => "questions/show"
     end
   end
   

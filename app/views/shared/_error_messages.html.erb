@@ -1,0 +1,11 @@
+<% if target.errors.any? %>  
+ <div class="alert-message block-message error">
+   <a class="close" href="#">×</a>
+   <p><strong>有 <%= target.errors.count %> 處問題導致無法送出:</strong></p>
+   <ul>
+   <% target.errors.full_messages.each do |msg| %>
+     <li><%= msg %></li>
+   <% end %>
+   </ul>
+ </div>
+<% end %>
