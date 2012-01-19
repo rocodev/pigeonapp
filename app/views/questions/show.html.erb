@@ -1,0 +1,35 @@
+<%= div_for(@question) do %>
+    <h2> <%= @question.subject %> </h2>
+    
+    <dic class="question-content">
+        <%= simple_format(@question.content)%>
+    </div>
+<% end %>
+
+
+<hr>
+
+<div class="reply row">
+  <div class= "span9">
+      <%= render :partial => "comments/comment", :as => :comment, :collection => @question.comments %>
+  </div>
+  <div class="span9">
+      <h3>發表回應</h3>
+      <%= simple_form_for :comment, :url => question_comments_path(@question) , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
+          <%= f.input :name %>
+          <%= f.input :email %>
+          <%= f.input :content, :as => :text, :input_html => { :class => "xxlarge"} %>
+          <div class="actions">
+              <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+          </div>
+      <% end %>
+  </div>
+</div>
+
+<%= content_for :sidebar do %>
+<div class="sidebar">
+  <div class="box">
+      3sss
+  </div>
+</div>
+<% end %>

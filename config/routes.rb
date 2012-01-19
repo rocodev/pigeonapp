@@ -11,6 +11,11 @@ PigeonApp::Application.routes.draw do
   resources :users
   
   constraints(Company) do 
+    resources :discussions 
+    resources :questions do 
+      resources :comments
+    end
+    
     match '/' => 'companies#show' 
   end
   

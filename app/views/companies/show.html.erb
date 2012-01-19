@@ -1,0 +1,16 @@
+
+<h2><%= @company.name %></h2>
+
+<div class="row">
+    <div class="box span5">
+        <%= link_to("提出問題", new_discussion_path, :class => "btn primary")%>
+    </div>
+    
+    <div class="box span5">
+        <%= link_to("問題列表", new_discussion_path, :class => "btn primary")%>
+    </div>
+    
+    <div class="box span5">
+        <%= link_to("常見 FAQ", new_discussion_path, :class => "btn primary")%>
+    </div>
+</div>

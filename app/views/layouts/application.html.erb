@@ -32,7 +32,9 @@
 
     <div id="main" class="container-fluid">
       <%# notice_message %>
+      <%= yield :sidebar %>
       <%= yield %>
+      
     </div>
   </div>
   <footer class="footer">
