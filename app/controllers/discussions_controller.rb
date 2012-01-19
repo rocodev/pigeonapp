@@ -10,6 +10,11 @@ class DiscussionsController < ApplicationController
     @categories = @company.categories
   end
   
+  def show
+    @category = Category.find(params[:id])
+    @questions = @category.questions
+  end
+  
   protected
   
   def find_company

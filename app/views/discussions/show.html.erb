@@ -1,0 +1,9 @@
+<%= div_for(@category) do %>
+    <h2> <%= @category.name %> </h2>
+    
+    <%= render_table(@questions, [
+      ["Title",                lambda { |question| link_to(question.name, discussion_question_path(@category, question))}],
+
+    ], {:class_name => "table"}) %>
+    
+<% end %>

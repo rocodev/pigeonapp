@@ -11,7 +11,9 @@ PigeonApp::Application.routes.draw do
   resources :users
   
   constraints(Company) do 
-    resources :discussions 
+    resources :discussions do
+      resources :questions
+    end
     resources :questions do 
       resources :comments
     end
