@@ -17,7 +17,7 @@
       unless params[:controller].match(/cpanel/)
         li << link_to(t("menu.edit_account_path"),edit_user_registration_path)
       end
-      li << link_to(t("common.logout"), destroy_user_session_path )
+      li << link_to(t("common.logout"), destroy_user_session_path, :method => :delete )
     end %>
   </li>
 </ul>
