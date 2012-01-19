@@ -19,9 +19,10 @@
         （<%= link_to "登入", Setting.domain + user_omniauth_authorize_path(:facebook) %> 會員可免填名稱、Email資料）
         <br><br>
       <% end %>
-      <%= simple_form_for :comment, :url => question_comments_path(@question) , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
-          <%= f.error_notification %>
+      <%= simple_form_for @comment, :url => question_comments_path(@question) , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
           
+         <%= render "shared/error_messages", :target => @comment %>
+         
           <% if !current_user %>
               <%= f.input :name %>
               <%= f.input :email %>

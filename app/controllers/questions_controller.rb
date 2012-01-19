@@ -3,6 +3,7 @@ class QuestionsController < ApplicationController
   before_filter :find_company
     
   def new
+    @comment = @question.comments.build
   end
   
   def create
@@ -17,6 +18,7 @@ class QuestionsController < ApplicationController
   
   def show
     @question = Question.find(params[:id])
+    @comment = @question.comments.build
   end
   
   protected
