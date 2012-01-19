@@ -6,6 +6,8 @@
     </div>
     <%= render_table(@questions, [
       ["Title",                lambda { |question| link_to(question.subject, discussion_question_path(@category, question))}],
+      ["回覆數量",lambda { |question| question.comments_count } ],
+      ["最後回覆", lambda { |question| render_latest_comment_status(question.latest_comment)} ],
 
     ], {:class_name => "table"}) %>
     

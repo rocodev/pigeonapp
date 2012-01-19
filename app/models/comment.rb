@@ -8,6 +8,13 @@ class Comment < ActiveRecord::Base
   validates_format_of :guest_email, :with => PigeonUtil::Regex::EMAIL, :message => "請輸入正確的Email", :if => Proc.new { |comment| comment.user_id.blank? }
   validate :must_has_user_or_guest_data
 
+  def author_name
+    if user
+      user.login
+    else
+      guest_name
+    end
+  end
   protected 
   
   def must_has_user_or_guest_data

@@ -9,6 +9,11 @@ class Question < ActiveRecord::Base
   validates_presence_of :content, :message => "請輸入內容"
   validates_format_of :guest_email, :with => PigeonUtil::Regex::EMAIL, :message => "請輸入正確的Email", :if => Proc.new { |comment| comment.user_id.blank? }
   validate :must_has_user_or_guest_data
+  
+  
+  def latest_comment
+    comments.last
+  end
 
   protected 
   

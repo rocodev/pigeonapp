@@ -7,6 +7,6 @@
 <%= render_table(@categories, [
   ["名稱",lambda { |category| link_to(category.name, discussion_path(category))}],
   ["問題數量", lambda {|category| category.questions.count}],
-  ["最新問題", lambda {|category| category.latest_question }],
+  ["最新問題", lambda {|category| render_question_subject(category.latest_question) }],
 
 ], {:class_name => "table"}) %>
