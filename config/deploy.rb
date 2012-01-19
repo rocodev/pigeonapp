@@ -84,3 +84,6 @@ after "deploy:finalize_update", "my_tasks:symlink"
 #after "deploy:finalize_update", "my_tasks:mongoid_create_indexes"
 #after "deploy:restart", "my_tasks:restart_resque"
 
+
+        require './config/boot'
+        require 'airbrake/capistrano'

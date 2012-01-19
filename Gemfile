@@ -32,6 +32,7 @@ group :assets do
   gem "uglifier"
 end
 
+gem "airbrake"
 
 
 # Use unicorn as the web server
