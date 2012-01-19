@@ -92,6 +92,7 @@ GEM
       railties (~> 3.0)
       thor (~> 0.14)
     json (1.6.3)
+    magic_encoding (0.0.2)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -187,6 +188,7 @@ DEPENDENCIES
   fastercsv
   jquery-rails
   json
+  magic_encoding
   mysql2
   oauth2
   omniauth

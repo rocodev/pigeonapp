@@ -1,9 +1,11 @@
+# -*- encoding : utf-8 -*-
 class DiscussionsController < ApplicationController
   
   before_filter :find_company
   
   def new
     @question = Question.new
+    drop_breadcrumb("提出問題")
   end
   
   def index

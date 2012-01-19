@@ -2,7 +2,7 @@
 <hr>
 
 <% if !current_user %>
-（<%= link_to "登入", Setting.domain + user_omniauth_authorize_path(:facebook) %> 會員可免填名稱、Email資料）
+（<%= link_to "登入", Setting.domain + user_omniauth_authorize_path(:facebook) %> 可免填名稱、Email資料）
 <br><br>
 <% end %>
 
@@ -11,8 +11,8 @@
     <%= render "shared/error_messages", :target => @question %>
     
     <% if !current_user %>
-        <%= f.input :name %>
-        <%= f.input :email %>
+        <%= f.input :guest_name %>
+        <%= f.input :guest_email %>
     <% end %>
     
     <%= f.input :subject, :input_html => { :class => "xxlarge"} %>

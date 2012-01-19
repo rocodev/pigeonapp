@@ -1,4 +1,4 @@
-# coding: utf-8 
+# -*- encoding : utf-8 -*-
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def self.provides_callback_for(*providers)
     providers.each do |provider|

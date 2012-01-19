@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 PigeonApp::Application.routes.draw do
 
 

@@ -1,4 +1,4 @@
-# coding: utf-8
+# -*- encoding : utf-8 -*-
 require "./config/boot"
 require "bundler/capistrano"
 require 'airbrake/capistrano'

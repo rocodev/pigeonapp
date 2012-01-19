@@ -1,9 +1,10 @@
+# -*- encoding : utf-8 -*-
 class QuestionsController < ApplicationController
  
   before_filter :find_company
     
   def new
-    @comment = @question.comments.build
+   
   end
   
   def create
@@ -19,6 +20,9 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find(params[:id])
     @comment = @question.comments.build
+    
+    drop_breadcrumb(@question.category.name, discussion_path(@question.category))
+    drop_breadcrumb(@question.subject)
   end
   
   protected

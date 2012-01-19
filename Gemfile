@@ -43,6 +43,7 @@ gem "airbrake"
 group :development do
   gem "capistrano"
   gem "cape"
+  gem "magic_encoding"
 end
 
 # To use debugger

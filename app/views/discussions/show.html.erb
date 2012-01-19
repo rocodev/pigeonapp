@@ -1,8 +1,11 @@
 <%= div_for(@category) do %>
-    <h2> <%= @category.name %> </h2>
+    <h2> <%= @category.name %> </h2>
     
+    <div class="right">
+        <%= link_to("新增問題", new_discussion_path, :class => "btn primary" )%>
+    </div>
     <%= render_table(@questions, [
-      ["Title",                lambda { |question| link_to(question.name, discussion_question_path(@category, question))}],
+      ["Title",                lambda { |question| link_to(question.subject, discussion_question_path(@category, question))}],
 
     ], {:class_name => "table"}) %>
     

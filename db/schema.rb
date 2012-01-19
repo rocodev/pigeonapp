@@ -25,14 +25,15 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "name"
     t.string   "slug"
     t.integer  "company_id"
+    t.integer  "questions_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "comments", :force => true do |t|
     t.text     "content"
-    t.string   "name"
-    t.string   "email"
+    t.string   "guest_name"
+    t.string   "guest_email"
     t.integer  "user_id"
     t.integer  "question_id"
     t.datetime "created_at"
@@ -47,13 +48,14 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string   "guest_name"
+    t.string   "guest_email"
     t.string   "subject"
     t.string   "content"
     t.integer  "company_id"
     t.integer  "user_id"
     t.integer  "category_id"
+    t.integer  "comments_count", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

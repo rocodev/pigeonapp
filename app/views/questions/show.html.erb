@@ -24,8 +24,8 @@
          <%= render "shared/error_messages", :target => @comment %>
          
           <% if !current_user %>
-              <%= f.input :name %>
-              <%= f.input :email %>
+              <%= f.input :guest_name %>
+              <%= f.input :guest_email %>
           <% end %>
           
 
@@ -40,7 +40,7 @@
 <%= content_for :sidebar do %>
 <div class="sidebar">
   <div class="box">
-      3sss
+      
   </div>
 </div>
 <% end %>
