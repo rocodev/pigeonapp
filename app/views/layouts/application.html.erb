@@ -24,10 +24,11 @@
   <div class="container">
     <%= render_breadcrumb %>
     <%# render "common/feeds" %>
-
+    
     <div id="main" class="container-fluid">
       <%# notice_message %>
       <%= yield :sidebar %>
+      <%= notice_message %>
       <%= yield %>
       
     </div>
@@ -38,6 +39,8 @@
     </div>
   </footer>
   
+
+    
   <%# render :partial => "common/facebook_js" %>
   <%# render :partial => "common/google_analytics"%>
  

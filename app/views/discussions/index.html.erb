@@ -1,4 +1,4 @@
-<%= render_table(@discussions, [
-  ["Title",                lambda { |discussion| }],
+<%= render_table(@categories, [
+  ["Title",                lambda { |category| link_to(category.name, discussion_path(category))}],
 
 ], {:class_name => "table"}) %>

@@ -7,7 +7,7 @@ class DiscussionsController < ApplicationController
   end
   
   def index
-    @discussions = @company.questions
+    @categories = @company.categories
   end
   
   protected
