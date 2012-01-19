@@ -5,8 +5,10 @@
 <br><br>
 <% end %>
 <%= simple_form_for :question, :url => questions_path , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
-    <%= f.input :name %>
-    <%= f.input :email %>
+    <% if !current_user %>
+        <%= f.input :name %>
+        <%= f.input :email %>
+    <% end %>
     <%= f.input :subject, :input_html => { :class => "xxlarge"} %>
     <%= f.input :content, :as => :text, :input_html => { :class => "xxlarge"} %>
     
