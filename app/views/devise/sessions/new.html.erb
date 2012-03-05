@@ -1,15 +1,19 @@
-<div class="sidebar">
-  <div class="box">
-    <h2>還沒有帳號?</h2>
-    <%= render :partial => "devise/shared/links" %>
+<%= content_for :sidebar do %>
+  <div class="sidebar" class="span3">
+    <div class="box">
+      <h2>還沒有帳號?</h2>
+      <%= render :partial => "devise/shared/links" %>
+    </div>
+    <div class="box">
+          <h2>用其他平台的帳號登入</h2>
+          <ul>
+              <li><%= link_to "Facebook", Setting.domain + user_omniauth_authorize_path(:facebook) %> </li>    
+          </ul>
+    </div>
   </div>
-  <div class="box">
-        <h2>用其他平台的帳號登入</h2>
-        <ul>
-            <li><%= link_to "Facebook", Setting.domain + user_omniauth_authorize_path(:facebook) %> </li>    
-        </ul>
-  </div>
-</div>
+  
+  
+<% end %>
 
 <div class="content">
     <div class="box">
