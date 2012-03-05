@@ -6,7 +6,7 @@ class CreateComments < ActiveRecord::Migration
       t.string :guest_name
       t.string :guest_email
       t.integer :user_id
-      t.integer :question_id
+      t.integer :product_id
       t.timestamps
     end
   end

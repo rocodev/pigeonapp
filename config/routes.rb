@@ -11,17 +11,6 @@ DeliverIO::Application.routes.draw do
   
   resources :users
   
-  constraints(Company) do 
-    resources :discussions do
-      resources :questions
-    end
-    resources :questions do 
-      resources :comments
-    end
-    
-    match '/' => 'companies#show' 
-  end
-  
   
   root :to => "pages#welcome"
 

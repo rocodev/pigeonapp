@@ -31,8 +31,8 @@ def create_seed_user
   create_user("evendesign@gmail.com", "evenwu", "612130717")
 end
 
-Company.create!(:name => "Logdown", :slug => "logdown")
-Company.create!(:name => "Rocodev", :slug => "rocodev")
+#Company.create!(:name => "Logdown", :slug => "logdown")
+#Company.create!(:name => "Rocodev", :slug => "rocodev")
 
 #create_seed_category
 #create_seed_user

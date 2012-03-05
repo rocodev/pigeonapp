@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120119093447) do
+ActiveRecord::Schema.define(:version => 20120305080852) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -35,29 +35,19 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "guest_name"
     t.string   "guest_email"
     t.integer  "user_id"
-    t.integer  "question_id"
+    t.integer  "product_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "companies", :force => true do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "questions", :force => true do |t|
-    t.string   "guest_name"
-    t.string   "guest_email"
-    t.string   "subject"
-    t.string   "content"
-    t.integer  "company_id"
+  create_table "products", :force => true do |t|
     t.integer  "user_id"
+    t.string   "title"
     t.integer  "category_id"
-    t.integer  "comments_count", :default => 0
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.string   "description"
+    t.string   "price",       :default => "0"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "users", :force => true do |t|
