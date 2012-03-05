@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "provider"
     t.integer  "user_id"
     t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "categories", :force => true do |t|
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "slug"
     t.integer  "company_id"
     t.integer  "questions_count", :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "comments", :force => true do |t|
@@ -36,15 +36,15 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "guest_email"
     t.integer  "user_id"
     t.integer  "question_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "slug"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "questions", :force => true do |t|
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.integer  "comments_count", :default => 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -72,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20120119093447) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "login"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                            :null => false
+    t.datetime "updated_at",                                            :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

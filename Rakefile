@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-PigeonApp::Application.load_tasks
+DeliverIO::Application.load_tasks

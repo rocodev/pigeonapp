@@ -1,8 +1,8 @@
 defaults: &defaults
-  app_name: "PigeonApp"
+  app_name: "DeliverIO"
   facebook_app_id: 173021319472291
   facebook_secret: 	dfcf40999761639a8c471318fd675cba
-  domain: "http://dev-pigeon.dev"    
+  domain: "http://dev-deliverio.dev"    
   admin_emails: 
     - "xuite.joke@gmail.com"
     - "evendesign@gmail.com"

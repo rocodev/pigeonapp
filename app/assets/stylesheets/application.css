@@ -6,4 +6,6 @@
  *= require sidebar
  *= require common
  *= require_self
+ *= require_tree .
 */
+

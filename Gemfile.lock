@@ -8,6 +8,15 @@ GIT
       thor (~> 0.14)
 
 GIT
+  remote: git://github.com/chriseppstein/compass.git
+  revision: 8c84869b0b6bc5396e264fea15c71d4e346ac5d0
+  specs:
+    compass (0.12.alpha.4.8c84869)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: 031e3324ca66c616f8aa0348164e26abb917b1b2
   specs:
@@ -18,40 +27,38 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    actionmailer (3.1.0)
-      actionpack (= 3.1.0)
-      mail (~> 2.3.0)
-    actionpack (3.1.0)
-      activemodel (= 3.1.0)
-      activesupport (= 3.1.0)
+    actionmailer (3.2.2)
+      actionpack (= 3.2.2)
+      mail (~> 2.4.0)
+    actionpack (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
-      i18n (~> 0.6)
-      rack (~> 1.3.2)
-      rack-cache (~> 1.0.3)
-      rack-mount (~> 0.8.2)
+      journey (~> 1.0.1)
+      rack (~> 1.4.0)
+      rack-cache (~> 1.1)
       rack-test (~> 0.6.1)
-      sprockets (~> 2.0.0)
-    activemodel (3.1.0)
-      activesupport (= 3.1.0)
-      bcrypt-ruby (~> 3.0.0)
+      sprockets (~> 2.1.2)
+    activemodel (3.2.2)
+      activesupport (= 3.2.2)
       builder (~> 3.0.0)
-      i18n (~> 0.6)
-    activerecord (3.1.0)
-      activemodel (= 3.1.0)
-      activesupport (= 3.1.0)
-      arel (~> 2.2.1)
+    activerecord (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
+      arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.1.0)
-      activemodel (= 3.1.0)
-      activesupport (= 3.1.0)
-    activesupport (3.1.0)
+    activeresource (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
+    activesupport (3.2.2)
+      i18n (~> 0.6)
       multi_json (~> 1.0)
     addressable (2.2.6)
     airbrake (3.0.9)
       activesupport
       builder
-    arel (2.2.1)
+    arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap_helper (1.4.1)
       railties (~> 3.0)
@@ -65,9 +72,10 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    chunky_png (1.2.5)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
-      railties (~> 3.1.0)
+      railties (~> 3.2.2)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -84,23 +92,25 @@ GEM
       multipart-post (~> 1.1.3)
       rack (>= 1.1.0, < 2)
     fastercsv (1.5.4)
+    fssm (0.2.8.1)
     hashie (1.2.0)
     highline (1.6.9)
     hike (1.2.1)
     i18n (0.6.0)
+    journey (1.0.3)
     jquery-rails (1.0.19)
       railties (~> 3.0)
       thor (~> 0.14)
-    json (1.6.3)
+    json (1.6.5)
     magic_encoding (0.0.2)
-    mail (2.3.0)
+    mail (2.4.1)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
     multipart-post (1.1.4)
-    mysql2 (0.3.7)
+    mysql2 (0.3.11)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -122,41 +132,39 @@ GEM
     open_graph_helper (0.0.3)
     orm_adapter (0.0.5)
     polyglot (0.3.3)
-    rack (1.3.5)
-    rack-cache (1.0.3)
+    rack (1.4.1)
+    rack-cache (1.1)
       rack (>= 0.4)
-    rack-mount (0.8.3)
-      rack (>= 1.0.0)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    rails (3.1.0)
-      actionmailer (= 3.1.0)
-      actionpack (= 3.1.0)
-      activerecord (= 3.1.0)
-      activeresource (= 3.1.0)
-      activesupport (= 3.1.0)
+    rails (3.2.2)
+      actionmailer (= 3.2.2)
+      actionpack (= 3.2.2)
+      activerecord (= 3.2.2)
+      activeresource (= 3.2.2)
+      activesupport (= 3.2.2)
       bundler (~> 1.0)
-      railties (= 3.1.0)
-    railties (3.1.0)
-      actionpack (= 3.1.0)
-      activesupport (= 3.1.0)
+      railties (= 3.2.2)
+    railties (3.2.2)
+      actionpack (= 3.2.2)
+      activesupport (= 3.2.2)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2.2)
-    rdoc (3.11)
+    rdoc (3.12)
       json (~> 1.4)
     sass (3.1.11)
     sass-rails (3.1.5)
-      actionpack (~> 3.1.0)
-      railties (~> 3.1.0)
+      actionpack (~> 3.2.2)
+      railties (~> 3.2.2)
       sass (~> 3.1.10)
       tilt (~> 1.3.2)
     settingslogic (2.0.6)
-    sprockets (2.0.3)
+    sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
@@ -165,7 +173,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.31)
+    tzinfo (0.3.32)
     uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
@@ -183,7 +191,8 @@ DEPENDENCIES
   cancan
   cape
   capistrano
-  coffee-rails (~> 3.1.0)
+  coffee-rails
+  compass!
   devise
   fastercsv
   jquery-rails
@@ -194,8 +203,8 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   open_graph_helper
-  rails (= 3.1.0)
-  sass-rails (~> 3.1.0)
+  rails (= 3.2.2)
+  sass-rails
   settingslogic
   simple_form!
   uglifier

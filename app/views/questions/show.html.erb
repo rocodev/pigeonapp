@@ -1,7 +1,20 @@
 <%= div_for(@question) do %>
-    <h2> <%= @question.subject %> </h2>
+    <h2 class="title"> <%= @question.subject %> </h2>
     
-    <dic class="question-content">
+    <div class="question-author-info clearfix">
+        <%= render_user_avatar(@question.user)%>
+    
+        <div class="info">
+            <div class="user-name">
+                <%= render_question_user_name(@question) %>
+            </div>
+            <div class="create-date">
+            <%= render_question_create_time(@question)%>
+            </div>
+        </div>
+    </div>
+    
+    <div class="question-content">
         <%= simple_format(@question.content)%>
     </div>
 <% end %>
@@ -21,7 +34,7 @@
       <% end %>
       <%= simple_form_for @comment, :url => question_comments_path(@question) , :html => { :method => :post }, :wrapper => :inline  do |f| -%>
           
-         <%= render "shared/error_messages", :target => @comment %>
+         <%= f.error_notification %>
          
           <% if !current_user %>
               <%= f.input :guest_name %>

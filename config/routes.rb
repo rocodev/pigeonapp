@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-PigeonApp::Application.routes.draw do
+DeliverIO::Application.routes.draw do
 
 
   devise_for :users, :controllers => {

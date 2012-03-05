@@ -1,3 +1,29 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.question{
+   h2.title{
+      padding-bottom: 5px;
+   }
+   
+   .question-content{
+       padding: 10px 0 10px 0;
+
+   }
+}
+.question-author-info { 
+  border-top: 1px solid #EEE;   
+  border-bottom: 1px solid #EEE;
+  padding: 5px 0 5px 0;
+  
+  .buddy-icon {
+    float:left;
+    display: block;
+  }
+  
+  .info {
+     margin-left: 43px;
+     margin-top: 3px;
+  }
+}

@@ -85,5 +85,5 @@ after "deploy:finalize_update", "my_tasks:symlink"
 #after "deploy:restart", "my_tasks:restart_resque"
 
 
-        require './config/boot'
-        require 'airbrake/capistrano'
+require './config/boot'
+require 'airbrake/capistrano'
