@@ -1,0 +1,24 @@
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <%= link_to(render_site_title, root_path, :class => "brand" )%>
+          <div class="nav-collapse">
+              <%= render_list :class => "nav" do |li|
+              
+               #li << link_to("關於我們", about_path  )
+		           #li << link_to("超級賽雅人", admin_root_path  ) if current_user && current_user.has_role?(:admin)
+		           #li << link_to("秘密小屋", admin_editor_path  ) if current_user && (current_user.has_role?(:admin) || current_user.has_role?(:editor))
+              end %>
+              
+              <%# render_cell :common, :search_form %>
+              <%= render :partial => "common/user_nav"%>
+
+          </div>
+    </div>
+  </div>
+</div>

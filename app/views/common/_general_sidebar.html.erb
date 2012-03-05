@@ -1,0 +1,62 @@
+<div id="sidebar" class="span3">
+
+  <div class="box">
+      <h3>創業人說</h3>
+      <blockquote style="font-size:14px;color:#777;line-height:20px">
+      </blockquote>
+
+  </div>
+
+  <!--
+  <div class="box">
+      <h3>關於</h3>
+      <blockquote style="font-size:14px;color:#777;line-height:20px">
+        創業基地是一個免費的創業團隊資料庫，你可以在此找創業人、投資人、還有台灣創業圈最新的各種資訊。
+      </blockquote>
+  </div>
+  -->
+  
+  <div class="box">
+      <h3>服務推廣</h3>
+      <div class="recommend-new-service life-plus">
+          <%= link_to( "Life Plus", "https://www.lifeplus.tw/")%>
+      </div>
+      <div class="recommend-new-service">
+        <%= link_to("Tagtoo", "http://www.tagtoo.org/", :class => "tagtoo")%>
+      </div>
+      <div class="recommend-new-service">
+        <%= link_to("GoodLife", "http://buy.goodlife.tw/", :class => "good-life")%>
+      </div>
+      <!--
+      <div class="recommend-new-service">
+        <%= link_to(image_tag("eztable_logo.png"), "http://www.eztable.com.tw/")%>
+      </div>
+      -->
+  </div>
+  
+    
+  <div class="box followus"> 
+      <h3>跟隨我們</h3>
+  </div>
+  
+    
+  <div class="box">
+      <h3>啤酒錢</h3>
+      <div class="recommend-new-service">
+          <%= link_to( "Top Admit", "http://www.topadmit.com/index/index/coupon/startupbase2012/", :class => "top-admin")%>
+      </div>
+      <iframe src="http://www.appsumo.com/ad/?r=vqL6&gid=WzYsIDMxNzA5OCwgIjIwMTIwMjI3MTU0MCIsICJhZCIsICJkYXNoIiwgbnVsbCwgIjJYIl0%3D" width="125" height="125" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+  </div> 
+  
+  <div class="box">
+      <h3>我們推薦的 Blog</h3>
+      <%= render_list :class => "recommend-blog" do |li| 
+          li << link_to("創業現場", "http://startuplive.cc/")
+          li << link_to("Mr.Jamie", "http://mrjamie.cc/")
+          li << link_to("EZTable", "http://blog.eztable.com.tw")
+          li << link_to("Tech 橘子", "http://techorange.com/" )
+          li << link_to("Inside", "http://www.inside.com.tw/")
+      end %>
+  </div>
+
+</div>

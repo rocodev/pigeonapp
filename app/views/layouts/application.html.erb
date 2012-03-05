@@ -8,31 +8,22 @@
 
 </head>
 <%= render_body_tag %>
-  <div class="topbar" data-dropdown="dropdown">
-    <div class="topbar-inner">
-      <div class="container">
-        <h3>
-          <a href="/"><%= render_site_title %></a>
-        </h3>
-         <%= render_list :class => "nav" do |li|
-         end %>
-        <%# render "common/search_form" %>
-        <%= render "common/user_nav" %>
-      </div>
-    </div>
-  </div>
+
+<%= render :partial => "common/menu" %>
+
   <div class="container">
-    <%= render_breadcrumb %>
-    <%# render "common/feeds" %>
-    
-    <div id="main" class="container-fluid">
-      <%# notice_message %>
-      <%= yield :sidebar %>
       <%= notice_message %>
-      <%= yield %>
-      
-    </div>
+
+      <div class="content">
+          <div class="row">
+              <div class="span9">
+                  <%= yield %>
+              </div>
+              <%= render :partial => "common/general_sidebar" %>
+          </div>
+      </div>
   </div>
+
   <footer class="footer">
     <div class="container">
       <%# raw SiteConfig.footer_html %>
