@@ -1,5 +1,5 @@
 <%= content_for :sidebar do %>
-  <div class="sidebar" class="span3">
+  <div id="sidebar" class="span3">
     <div class="box">
       <h2>還沒有帳號?</h2>
       <%= render :partial => "devise/shared/links" %>
@@ -15,19 +15,17 @@
   
 <% end %>
 
-<div class="content">
-    <div class="box">
-    <h2>Sign in</h2>
+<div class="box">
+<h2>Sign in</h2>
 
-    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :wrapper => :inline ) do |f| %>
-        <fieldset>
-        <%= f.input :email, :required => false, :autofocus => true %>
-        <%= f.input :password, :required => false %>
-        <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
-        </fieldset>
-        <div class="actions">
-            <%= f.button :submit, "Sign in" %>
-        </div>
-    <% end %>
+<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :wrapper => :inline ) do |f| %>
+    <fieldset>
+    <%= f.input :email, :required => false, :autofocus => true %>
+    <%= f.input :password, :required => false %>
+    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    </fieldset>
+    <div class="actions">
+        <%= f.button :submit, "Sign in" %>
     </div>
+<% end %>
 </div>

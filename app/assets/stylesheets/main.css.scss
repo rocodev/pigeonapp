@@ -2,3 +2,26 @@
 @import "responsive";
 @import "mobile";
 @import "compass";
+
+
+body{
+  padding-top: 60px;
+}
+
+a{
+  color: #0069D6;
+}
+a:hover {
+    background-color: #aaaaaa
+}
+
+.group:before, .group:after {
+   content: "";
+   display: table;
+}
+.group:after {
+   clear: both;
+}
+.group {
+   zoom: 1; /* IE6&7 */
+}
