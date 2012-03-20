@@ -42,11 +42,12 @@ gem "seo_helper", "~> 1.0", :git => "git://github.com/techbang/seo_helper.git"
 gem "heroku"
 
 group :assets do
-  gem "sass-rails"
+  gem 'sass-rails', "  ~> 3.1.0"
   gem 'compass-rails'
-  gem "coffee-rails"
-  gem "uglifier"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
 end
+
 
 gem "airbrake"
 
