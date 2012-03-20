@@ -39,6 +39,7 @@ gem "seo_helper", "~> 1.0", :git => "git://github.com/techbang/seo_helper.git"
 # Gems used only for assets and not required
 # in production environments by default.
 
+gem "heroku"
 
 group :assets do
   gem "sass-rails"
@@ -48,6 +49,12 @@ group :assets do
 end
 
 gem "airbrake"
+
+group :production do
+  gem "pg"
+  gem "thin"    #light weight web server
+  gem "therubyracer-heroku", "0.8.1.pre3"
+end
 
 
 # Use unicorn as the web server
