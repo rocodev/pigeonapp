@@ -7,7 +7,7 @@
     </a>
     <%= render_list :class => "dropdown-menu" do |li|
         ##li << link_to('編輯個人資料', edit_panel_user_path(current_user))
-        li << link_to("登出", "/logout" )
+        li << link_to("登出", "/sign_out" )
     end %>
 
   </li>
@@ -16,8 +16,7 @@
 <% else %>
 
 <%= render_list :class => "nav pills pull-right" do |li|
-    li << link_to( t("common.register"),new_user_registration_path)
-    li << link_to( t("common.login"), new_user_session_path )
+    li << link_to( t("common.login"),  Setting.domain + user_omniauth_authorize_path(:facebook) )
 end %>
 
 <% end %>

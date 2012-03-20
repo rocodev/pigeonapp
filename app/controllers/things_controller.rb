@@ -1,6 +1,6 @@
 class ThingsController < ApplicationController
   
-  before_filter :require_user, :except => [ :index, :new ]
+  before_filter :require_user, :except => [ :index, :show ]
   
   def index
     @things = Thing.paginate(:page => params[:page], :per_page => 10)
