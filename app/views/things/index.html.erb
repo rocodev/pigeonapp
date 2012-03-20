@@ -1,0 +1,16 @@
+<h2>為什麼他們...</h2>
+<div><%= will_paginate(@things)%></div>
+<hr>
+
+<table class="table table-striped table-bordered">
+  <tbody>
+    <% @things.each do |thing| -%>
+      <tr class="mltr">
+    <td>
+      <%= thing.user.login %>  為什麼 <%= render_thing_verb(thing.verb) %> <%= thing.description %> ，因為 <%= truncate(thing.reason, :lenth => 50 ) %> <%= link_to "...more", thing_path(thing) %>
+    </td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
+<div><%= will_paginate @things %></div>

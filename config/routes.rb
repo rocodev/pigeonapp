@@ -9,10 +9,10 @@ DeliverIO::Application.routes.draw do
     get "logout" => "devise/sessions#destroy"
   end
   
-  resources :users
+  resources :things
   
   
-  root :to => "pages#welcome"
+  root :to => "things#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

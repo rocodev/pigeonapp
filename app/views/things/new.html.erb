@@ -1,0 +1,16 @@
+<h2>我為什麼...</h2>
+
+<%= simple_form_for @thing do |f| %>
+
+  <%= f.input :verb, :label => "選擇" do %>
+      <%= f.select :verb , [["不", "NO"], [ "要","WANT"]] %>
+  <% end %>
+  
+  <%= f.input :description, :as => :text, :input_html => { :class => "input-xxlarge", :rows => 5  } %>
+  <%= f.input :reason, :as => :text, :input_html => { :class => "input-xxlarge", :rows => 10  } %>
+  
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">儲存</button>
+  </div>
+  
+<% end %>

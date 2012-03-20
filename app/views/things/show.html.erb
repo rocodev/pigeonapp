@@ -1,0 +1,7 @@
+<%= @thing.user.login %>  為什麼 <%= render_thing_verb(@thing.verb) %> <%= @thing.description %> ，因為 <%= @thing.reason %>。
+
+<% if current_user && current_user == @thing.user %>
+<hr>
+
+<%= link_to("編輯", edit_thing_path(@thing), :class => "btn btn-primary" )%> | <%= link_to("刪除", thing_path(@thing), :method => :delete , :class => "btn") %>
+<% end %>
