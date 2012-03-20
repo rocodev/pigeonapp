@@ -1,0 +1,22 @@
+defaults: &defaults
+  app_name: "WhyDontI"
+  facebook_app_id: 268783346536933
+  facebook_secret: 	f99d9b6a42021339a6385cf5a9557638
+  domain: "http://dev-whydonti.dev"    
+  admin_emails: 
+    - "xuite.joke@gmail.com"
+    - "evendesign@gmail.com"
+  google_analytics_key: ""
+  upload_url: "http://ruby-taiwan.dev/file"
+  email_sender: 'no-reply@ruby-china.org'
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  facebook_app_id: 	363554570352107
+  facebook_secret: 	73128ece33f4a2a61b3aa15159512915
+  domain: "http://whydonti.org"    
