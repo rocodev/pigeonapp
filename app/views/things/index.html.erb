@@ -2,6 +2,8 @@
 <div><%= will_paginate(@things)%></div>
 <hr>
 
+<%= link_to("也來寫一下你的為什麼！", new_thing_path, :class => "btn btn-primary") %>
+
 <table class="table table-striped table-bordered">
   <tbody>
     <% @things.each do |thing| -%>
